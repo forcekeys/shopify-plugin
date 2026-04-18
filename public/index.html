@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forcekeys Translation API - Shopify App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #5c6ac4 0%, #4a56a2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #5c6ac4;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #5c6ac4;
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #5c6ac4;
+        }
+
+        .feature h3 {
+            color: #5c6ac4;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .steps {
+            background: #f0f4ff;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            background: #5c6ac4;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            color: #5c6ac4;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .btn-primary {
+            background: #5c6ac4;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #4a56a2;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(92, 106, 196, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #5c6ac4;
+            border: 2px solid #5c6ac4;
+        }
+
+        .btn-secondary:hover {
+            background: #f0f4ff;
+            transform: translateY(-2px);
+        }
+
+        .status {
+            background: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            color: #2e7d32;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-icon {
+            font-size: 24px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #eee;
+            background: #f8f9fa;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .btn {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">F</div>
+            <h1>Forcekeys Translation API</h1>
+            <div class="subtitle">Shopify App Integration</div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>Welcome to Forcekeys Translation</h2>
+                <p>Translate your Shopify store products, collections, and content into multiple languages with our powerful AI translation API.</p>
+                <p>Support for 70+ languages, real-time translation, and seamless Shopify integration.</p>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <h3>🌍 Multi-language Support</h3>
+                    <p>Translate your store into 70+ languages including Spanish, French, German, Chinese, and more.</p>
+                </div>
+                <div class="feature">
+                    <h3>⚡ Real-time Translation</h3>
+                    <p>Instant translation of product titles, descriptions, and collections as you create them.</p>
+                </div>
+                <div class="feature">
+                    <h3>🛍️ Shopify Native</h3>
+                    <p>Seamless integration with Shopify Admin, webhooks, and the Shopify App Store.</p>
+                </div>
+            </div>
+
+            <div class="steps">
+                <h2>Getting Started</h2>
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Install from Shopify App Store</h4>
+                        <p>Visit the Shopify App Store and search for "Forcekeys Translation"</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Connect Your Store</h4>
+                        <p>Grant necessary permissions for product and content translation</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Configure API Key</h4>
+                        <p>Enter your Forcekeys API key in the app settings</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Start Translating</h4>
+                        <p>Use the translation tools in your Shopify admin dashboard</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <a href="https://apps.shopify.com/forcekeys-translation" class="btn btn-primary" target="_blank">
+                    Install from Shopify App Store
+                </a>
+                <a href="https://forcekeys.com/docs/shopify" class="btn btn-secondary" target="_blank">
+                    View Documentation
+                </a>
+            </div>
+
+            <div class="status">
+                <div class="status-icon">✓</div>
+                <div>
+                    <strong>API Status:</strong> All systems operational. Translation services are running normally.
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Forcekeys Translation API. All rights reserved.</p>
+            <p>Need help? Contact support@forcekeys.com</p>
+        </div>
+    </div>
+
+    <script>
+        // Simple status check
+        async function checkStatus() {
+            try {
+                const response = await fetch('/health');
+                if (response.ok) {
+                    console.log('API is running');
+                }
+            } catch (error) {
+                console.log('API check failed');
+            }
+        }
+
+        // Check status on load
+        window.addEventListener('load', checkStatus);
+    </script>
+</body>
+</html>
