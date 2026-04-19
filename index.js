@@ -301,7 +301,7 @@ app.use((err, req, res, next) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`Forcekeys Shopify App running on port ${PORT}`);
-  console.log(`Forcekeys API URL: ${process.env.FORCEKEYS_API_URL || 'http://localhost:5000'}`);
+  console.log(`Forcekeys API URL: ${process.env.FORCEKEYS_API_URL || 'http://localhost:5002'}`);
 });
 
 module.exports = app;
