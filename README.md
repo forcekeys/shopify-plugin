@@ -55,7 +55,7 @@ Translate your Shopify store products, collections, and content using the powerf
 ### API Requirements
 - Forcekeys Translation API account
 - Valid API key with sufficient quota
-- Internet connectivity to `api.translate.forcekeys.com`
+- Internet connectivity to `api.deeptranslate.online`
 
 ## 🚀 Installation
 
@@ -122,7 +122,7 @@ SHOPIFY_APP_URL=https://your-domain.com
 
 # Forcekeys Configuration
 FORCEKEYS_API_KEY=your_forcekeys_api_key
-FORCEKEYS_API_URL=https://api.translate.forcekeys.com
+FORCEKEYS_API_URL=https://api.deeptranslate.online
 
 # Server Configuration
 PORT=3000

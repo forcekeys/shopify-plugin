@@ -22,7 +22,7 @@ const config = {
   // Forcekeys API Configuration
   forcekeys: {
     apiKey: process.env.FORCEKEYS_API_KEY || '',
-    apiUrl: process.env.FORCEKEYS_API_URL || 'https://api.translate.forcekeys.com',
+    apiUrl: process.env.FORCEKEYS_API_URL || 'https://api.deeptranslate.online',
     apiVersion: 'v1',
     
     // Endpoints
